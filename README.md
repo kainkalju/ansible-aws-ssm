@@ -11,8 +11,6 @@ ansible-aws-project
 │   └── create_s3_bucket.yml    # Playbook to create an S3 bucket
 ├── inventory
 │   └── hosts.ini               # Inventory file for EC2 instances
-├── group_vars
-│   └── all.yml                 # Variables applicable to all hosts
 ├── roles
 │   ├── bucket
 │   │   ├── tasks
