@@ -5,7 +5,7 @@ This project contains Ansible playbooks and roles for managing AWS resources, sp
 ## Project Structure
 
 ```
-ansible-aws-project
+ansible-aws-ssm
 ├── playbooks
 │   ├── install_httpd.yml       # Playbook to install httpd on EC2 instances
 │   └── create_s3_bucket.yml    # Playbook to create an S3 bucket
