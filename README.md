@@ -10,7 +10,8 @@ ansible-aws-ssm
 │   ├── install_httpd.yml       # Playbook to install httpd on EC2 instances
 │   └── create_s3_bucket.yml    # Playbook to create an S3 bucket
 ├── inventory
-│   └── hosts.ini               # Inventory file for EC2 instances
+│   ├── hosts.ini               # Static inventory file for EC2 instances
+│   └── aws_ec2.yml             # AWS EC2 dynamic inventory configuration
 ├── roles
 │   ├── bucket
 │   │   ├── tasks
