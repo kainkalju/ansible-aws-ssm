@@ -1,0 +1,20 @@
+---
+- name: Create S3 Bucket
+  hosts: localhost
+  gather_facts: false
+
+  roles:
+    - bucket
+
+- name: Install httpd on AWS EC2 instances
+  hosts: ec2_instances
+  connection: aws_ssm
+  become: true
+  gather_facts: false
+  vars:
+    ansible_aws_ssm_bucket_name: ansible-tmp-654654150928-eu-north-1
+    ansible_aws_ssm_region: eu-north-1
+    ansible_aws_ssm_profile: learning
+
+  roles:
+    - httpd

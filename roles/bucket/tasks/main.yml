@@ -1,0 +1,12 @@
+---
+- name: Create S3 bucket
+  amazon.aws.s3_bucket:
+    name: ansible-tmp-654654150928-eu-north-1
+    state: present
+    aws_region: "{{ aws_region }}"
+    aws_profile: "{{ aws_profile }}"
+  register: s3_bucket
+
+- name: Output bucket creation result
+  debug:
+    var: s3_bucket

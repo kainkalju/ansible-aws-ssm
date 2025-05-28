@@ -1,0 +1,10 @@
+---
+- name: Install httpd package
+  dnf:
+    name: httpd
+    state: present
+  register: result
+
+- name: Check installation result
+  debug:
+    var: result
