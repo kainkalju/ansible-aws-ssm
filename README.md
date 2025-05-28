@@ -20,10 +20,8 @@ ansible-aws-project
 │   │   └── vars
 │   │       └── main.yml        # Variables for the bucket role
 │   └── httpd
-│       ├── tasks
-│       │   └── main.yml        # Main tasks for the httpd role
-│       └── vars
-│           └── main.yml        # Variables for the httpd role
+│       └── tasks
+│           └── main.yml        # Main tasks for the httpd role
 ├── requirements.yml            # Required Ansible collections and roles
 ├── playbook.yml                # Example or main playbook entry point
 └── README.md                   # Project documentation
