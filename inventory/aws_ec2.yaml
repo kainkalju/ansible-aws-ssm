@@ -1,0 +1,22 @@
+# https://docs.ansible.com/ansible/latest/collections/amazon/aws/docsite/aws_ec2_guide.html
+plugin: amazon.aws.aws_ec2
+regions:
+  - eu-north-1
+filters:
+  instance-state-name: running
+keyed_groups:
+  - key: tags.Name
+    prefix: test
+hostnames:
+# Define how to identify hosts in the inventory
+  - tag:Name
+  - public-ip-address
+  - private-ip-address
+  - dns-name
+compose:
+# This lets you connect over SSM to the instance id.
+  ansible_host: instance_id
+  ansible_connection: 'community.aws.aws_ssm'
+
+# Optional: Set your AWS profile if not using default
+aws_profile: learning

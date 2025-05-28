@@ -7,7 +7,7 @@
     - bucket
 
 - name: Install httpd on AWS EC2 instances
-  hosts: ec2_instances
+  hosts: aws_ec2
   connection: aws_ssm
   become: true
   gather_facts: false
